@@ -9,5 +9,14 @@ return {
   { import = "astrocommunity.bars-and-lines.heirline-vscode-winbar" },
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   { import = "astrocommunity.project.project-nvim" },
-  { import = "astrocommunity.utility.noice-nvim"}
+  { import = "astrocommunity.utility.noice-nvim"},
+  { import = "astrocommunity.indent.indent-blankline-nvim" },
+  { import = "astrocommunity.indent.mini-indentscope" },
+  {
+    "echasnovski/mini.indentscope",
+    opts = {
+      symbol = "╎",
+      options = { try_as_border = false, indent_at_cursor = true },
+    },
+  },
 }

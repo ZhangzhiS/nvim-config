@@ -26,7 +26,7 @@ end
 
 M.macFocusGained = function() vim.cmd(":silent :!im-select" .. " " .. getChangeIM()) end
 
-M.macFocusLost = function() vim.cmd(":silent :!im-select" .. " " .. Mac.zh_cn) end
+M.macFocusLost = function() vim.cmd(":silent :!im-select" .. " " .. Mac.en) end
 
 M.macInsertLeave = function() vim.cmd(":silent :!im-select" .. " " .. Mac.en) end
 
