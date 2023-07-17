@@ -14,7 +14,7 @@ local getChangeIM = function()
     return Mac.en
   elseif mode == "i" then
     -- 当前是 insert 模式
-    return Mac.zh_cn
+    return Mac.en
   elseif mode == "v" then
     -- 当前是 visual 模式
     return Mac.en
@@ -26,9 +26,9 @@ end
 
 M.macFocusGained = function() vim.cmd(":silent :!im-select" .. " " .. getChangeIM()) end
 
-M.macFocusLost = function() vim.cmd(":silent :!im-select" .. " " .. Mac.en) end
+M.macFocusLost = function() vim.cmd(":silent :!im-select" .. " " .. Mac.zh_cn) end
 
-M.macInsertLeave = function() vim.cmd(":silent :!im-select" .. " " .. Mac.en) end
+M.macInsertLeave = function() vim.cmd(":silent :!im-select" .. " " .. Mac.zh_cn) end
 
 M.macInsertEnter = function() vim.cmd(":silent :!im-select" .. " " .. Mac.zh_cn) end
 

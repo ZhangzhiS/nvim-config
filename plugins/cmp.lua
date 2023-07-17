@@ -21,7 +21,14 @@ return {
         config = function()
           local tabnine = require "cmp_tabnine.config"
           tabnine:setup {
-          -- put your options here
+            -- put your options here
+            max_lines = 1000,
+            max_num_results = 20,
+            sort = true,
+            run_on_every_keystroke = true,
+            snippet_placeholder = "..",
+            -- 显示预测强度
+            show_prediction_strength = true,
           }
         end,
       },
@@ -56,7 +63,9 @@ return {
         preselect = cmp.PreselectMode.None,
         formatting = {
           fields = { "kind", "abbr", "menu" },
-          format = lspkind_status_ok and lspkind.cmp_format(utils.plugin_opts "lspkind.nvim") or nil,
+          format = lspkind_status_ok and lspkind.cmp_format(
+            utils.plugin_opts "lspkind.nvim"
+          ) or nil,
         },
         snippet = {
           expand = function(args) luasnip.lsp_expand(args.body) end,

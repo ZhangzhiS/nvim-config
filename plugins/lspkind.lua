@@ -1,7 +1,17 @@
 return {
   "onsails/lspkind.nvim",
   opts = function(_, opts)
+    opts.mode = "symbol"
     opts.preset = "codicons"
+    opts.menu = ({
+      buffer = "[Buf]",
+      nvim_lsp = "[LSP]",
+      luasnip = "[LS]",
+      nvim_lua = "[Lua]",
+      latex_symbols = "[Latex]",
+      cmp_tabnine = "[TN]",
+      path = "[Path]",
+    })
     opts.symbol_map = {
       Array = " ",
       Boolean = " ",
@@ -33,6 +43,7 @@ return {
       String = " ",
       Struct = " ",
       Text = " ",
+      TabNine = "",
       TypeParameter = " ",
       Unit = " ",
       Value = " ",
